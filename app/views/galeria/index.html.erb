@@ -1,0 +1,53 @@
+    <!-- Main -->
+<div id="main">
+  <!-- Header -->
+  <header id="header">
+    <h1>Desafio 2</h1>
+    <p>Textovich descriptivo que te manda a un <a href="https://music.youtube.com/watch?v=0LwcvjNJTuM&list=RDAMVM80DtQD5BQ_A">TEMAZO</a></p>
+    <ul class="icons">
+      <li><a href="https://www.youtube.com/watch?v=GFq6wH5JR2A" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+      <li><a href="https://www.youtube.com/watch?v=GFq6wH5JR2A" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+      <li><a href="https://www.youtube.com/watch?v=GFq6wH5JR2A" class="icon brands fa-github"><span class="label">Github</span></a></li>
+      <li><a href="https://www.youtube.com/watch?v=GFq6wH5JR2A" class="icon fa-envelope"><span class="label">Email</span></a></li>
+    </ul>
+  </header>
+  <!-- Thumbnail -->
+  <section id="thumbnails">
+    <% images = [
+          ['01', 'Diam tempus accumsan', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'],
+          ['02', 'Vivamus convallis libero', 'Sed velit lacus, laoreet at venenatis convallis in lorem tincidunt.'],
+          ['03', 'Nec accumsan enim felis', 'Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.'],
+          ['04', 'Donec maximus nisi eget', 'Tristique in nulla vel congue. Sed sociis natoque parturient nascetur.'],
+          ['05', 'Nullam vitae nunc vulputate', 'In pellentesque cursus velit id posuere. Donec vehicula nulla.'],
+          ['06', 'Phasellus magna faucibus', 'Nulla dignissim libero maximus tellus varius dictum ut posuere magna.'],
+          ['07', 'Proin quis mauris', 'Etiam ultricies, lorem quis efficitur porttitor, facilisis ante orci urna.'],
+          ['08', 'Gravida quis varius enim', 'Nunc egestas congue lorem. Nullam dictum placerat ex sapien tortor mattis.'],
+          ['09', 'Morbi eget vitae adipiscing', 'In quis vulputate dui. Maecenas metus elit, dictum praesent lacinia lacus.'],
+          ['10', 'Habitant tristique senectus', 'Vestibulum ante ipsum primis in faucibus orci luctus ac tincidunt dolor.'],
+          ['11', 'Pharetra ex non faucibus', 'Ut sed magna euismod leo laoreet congue. Fusce congue enim ultricies.'],
+          ['12', 'Mattis lorem sodales', 'Feugiat auctor leo massa, nec vestibulum nisl erat faucibus, rutrum nulla.']
+        ] %>
+    <% images.each do |image| %>
+      <article>
+        <a class="thumbnail" href="<%= asset_path("fulls/#{image[0]}.jpg") %>" data-position="left center">
+          <img src="<%= asset_path("thumbs/#{image[0]}.jpg") %>" alt="" />
+        </a>
+        <h2><%= image[1] %></h2>
+        <p><%= image[2] %></p>
+      </article>
+    <% end %>
+  </section>
+  <!-- Footer -->
+  <footer id="footer">
+    <ul class="copyright">
+      <li>&copy; Undefined kiee</li>
+      <li>Design: <a href="https://www.youtube.com/watch?v=M0YKOq_lWSQ">IOREMOS</a>.</li>
+    </ul>
+    <%= link_to '¿Qué es esta galería?', resumen_path %>
+  </footer>
+</div>
+ <!-- Scripts -->
+    <script src="<%= asset_path('jquery.min.js') %>"></script>
+    <script src="<%= asset_path('browser.min.js') %>"></script>
+    <script src="<%= asset_path('breakpoints.min.js') %>"></script>
+    <script src="<%= asset_path('main.js') %>"></script>
