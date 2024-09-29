@@ -12,7 +12,6 @@
 }
 
 body:before {
-	content: 'Javascript is disabled :(';
 	display: block;
 	position: absolute;
 	top: 50%;
